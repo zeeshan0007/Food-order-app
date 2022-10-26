@@ -3,6 +3,7 @@ import {Fragment} from 'react'
 import mealsImage from '../../assets/meals.jpg'
 import classes from './Header.module.css'
 import HeaderCartButton from "./HeaderCartButton";
+import AddNewMeal from "./AddNewMeal/AddNewMeal";
 
 const Header = props =>{
 
@@ -10,13 +11,13 @@ const Header = props =>{
 
         <header className={classes.header}>
             <h1>ReactMeals</h1>
+            <AddNewMeal onClick={props.onAddMealModal}/>
             <HeaderCartButton onClick={props.onShowCart}/>
-        </header>
 
+        </header>
         <div className={classes['main-image']}>
             <img src={mealsImage} alt="A table full of meals"/>
         </div>
-
     </Fragment>
 }
 export default Header;
